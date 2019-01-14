@@ -17,5 +17,10 @@ pipeline {
         cleanWs(cleanWhenAborted: true)
       }
     }
+    stage('del') {
+      steps {
+        input(message: 'hie', id: 'test')
+      }
+    }
   }
 }
