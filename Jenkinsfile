@@ -12,5 +12,10 @@ pipeline {
         sh 'npm install'
       }
     }
+    stage('test') {
+      steps {
+        cleanWs(cleanWhenAborted: true)
+      }
+    }
   }
 }
